@@ -4,31 +4,34 @@
 
 
 {{!-- Elemento nav, responsável pela estrutura de navegação --}}
-<nav class="navbar bg-primary ">
+<nav class="navbar navbar-expand-lg custom-navbar ">
    
     {{!-- Estrutura container do bootstrap para agrupar a estrutura --}}
     <div class="container-fluid navbar-dark ">
    
         {{!-- Logo/Título do projeto --}}
-        <a class="navbar-brand" href="/">Node.js e MySQL</a>
+        <a class="navbar-brand" href="/">Logo</a>
        
-
-       
-   
         {{!-- Botão que é exibido em versões de pequeno e médio porte (Até 991px) --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         {{!-- Estrutura contendo os links e o formulário para pesquisa --}}
-        <div class="navbar navbar-expand-lg navbar-dark bg-primary" id="navbarSupportedContent">
+        <div class="navbar navbar-expand-lg navbar-dark" id="navbarSupportedContent">
            
             {{!-- Lista de links --}}
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-               
-                {{!-- Link de cadastro --}}
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Cadastrar produto</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Registros
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/">Cadastrar funcionario</a></li>
+                        <li><a class="dropdown-item" href="/">Cadastrar Serviço</a></li>
+                        <li><a class="dropdown-item" href="/">Usuários</a></li>
+                    </ul>
                 </li>
 
                 {{!-- Dropdown contendo os links para listagem de produtos --}}
@@ -38,10 +41,10 @@
                     </a>
 
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/listar/todos">Todos os produtos</a></li>
-                        <li><a class="dropdown-item" href="/listar/alimenticio">Alimentício</a></li>
-                        <li><a class="dropdown-item" href="/listar/eletronico">Eletrônico</a></li>
-                        <li><a class="dropdown-item" href="/listar/vestuario">Vestuário</a></li>
+                        <li><a class="dropdown-item" href="/listar/todos">Todos os serviços</a></li>
+                        <li><a class="dropdown-item" href="/listar/alimenticio">Masculino</a></li>
+                        <li><a class="dropdown-item" href="/listar/eletronico">Feminino</a></li>
+                        <li><a class="dropdown-item" href="/listar/vestuario">Infantil</a></li>
                     </ul>
                 </li>
             </ul>

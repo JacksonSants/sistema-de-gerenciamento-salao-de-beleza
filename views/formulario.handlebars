@@ -4,14 +4,19 @@
             <div class="col-6 offset-3">
                 {{>mensagens}}
                 <form action="/cadastrar" method="post" enctype="multipart/form-data" class="input-form">
+
+                    <h1>Cadastre seu serviço</h1>
+
                     <div class="mb-2">
-                        <label for="exampleFormControlInput1" class="form-label">Serviço</label>
-                        <input type="text" value="" name="nome" class="form-control" placeholder="Serviço">
+                        <label for="nome" class="form-label">Serviço</label>
+                        <input type="text" value="" name="nome" class="form-control input-box" placeholder="Serviço">
                     </div>
+
                     <div class="mb-2">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <input type="number" value="" name="valor" class="form-control" placeholder="Valor R$">
+                        <label for="exampleFormControlInput1" class="form-label">Valor</label>
+                        <input type="number" value="" name="valor" class="form-control input-box" placeholder="Valor R$">
                     </div>
+                    
                     <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">Categoria</label>
                         {{!-- MENU CATEGORIA --}}
@@ -24,8 +29,8 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="file">Adicione uma imagem do serviço</label>
-                        <input type="file" value="" name="imagem" class="form-control" placeholder="Adicione uma imagem da serviço">
+                        <label for="file" class="form-label">Adicione uma imagem do serviço</label>
+                        <input type="file" value="" name="imagem" class="form-control input-box" placeholder="Adicione uma imagem da serviço">
                     </div>
                     <input type="submit" class="btn btn-primary" value="Cadastrar">
                 </form>

@@ -1,60 +1,198 @@
+.custom-navbar {
+    background-color: #0ad7f7;
+    background-position: center;
+    background-size: cover;
+}
+
 main {
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #f3f3f3;
+    overflow: auto;
 }
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .input-form {
-    padding: 10px 20px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    border: .5px solid #494949;
+    backdrop-filter: blur(20px);
+    background-color: transparent;
 }
 
-.input-form .btn{
+.input-form label {
+    color: #494949;
+}
+
+.input-form .input-box {
+    background-color: #d3d3d3;
+    height: 40px;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+.input-form .input-box::placeholder {
+    color: #adadad;
+}
+
+
+.input-form select {
+    background-color: #d3d3d3;
+    color: #adadad;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+.input-box[type="file"]::-webkit-file-upload-button {
+    margin-top: -2px;
+    color: #adadad;
+    /* Define a cor do texto do input do tipo "file" como branco */
+}
+
+
+.input-form .btn {
     width: 100%;
+    background-color: #fca943;
+    border-radius: 20px;
 }
 
 
 .card {
     margin-top: 40px;
-    padding: 5px;  
+    padding: 5px;
 
 }
 
-.textos{
+.card img{
+    border-radius: 10px;
+
+}
+
+.textos {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
     font-weight: bold;
 
 }
-.card a{
+
+.card a {
     margin: 3px;
 }
-.alert{
+
+.alert {
     margin-top: 30px;
 }
+
 /* menu */
 /* Remover margem do formulário */
-.formularioPesquisa{
+.formularioPesquisa {
     margin: 0;
 }
 
 /* Estrutura do formulário de pesquisa (barra de navegação) */
 .formularioPesquisa input,
-.formularioPesquisa input[type="submit"]
-{
+.formularioPesquisa input[type="submit"] {
     margin: 0;
-   
+
 }
 
 /* Configurar o dropdown para ser exibido quando passar o cursor sobre o link */
+.navbar-nav  {
+    background: none;
+}
+.navbar-nav .nav-item a{
+    color: #fff;
+}
+
+.dropdown .dropdown-menu li a{
+    color:#494949;
+}
+
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
-   
+    color: #494949;
+}
+
+footer {
+    background-color: #0ad7f7;
+    height: 100%;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+/*Formulario Editar*/
+
+.input-editar {
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: .5px solid #494949;
+    backdrop-filter: blur(20px);
+    background-color: transparent;
+}
+
+.input-editar .img-edit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-editar .img-edit img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+
+.input-editar label {
+    color: #494949;
+}
+
+.input-editar .input-box {
+    background-color: #d3d3d3;
+    height: 40px;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+.input-editar .input-box::placeholder {
+    color: #adadad;
+}
+
+
+.input-editar select {
+    background-color: #d3d3d3;
+    color: #adadad;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+
+.input-editar .btn {
+    width: 100%;
+    background-color: #fca943;
+    border-radius: 20px;
+
 }

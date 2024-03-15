@@ -1,0 +1,24 @@
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                {{>mensagens}}
+                <form action="/cadastrar" method="post" enctype="multipart/form-data" class="input-form">
+
+                    <div class="mb-3">
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="mb-3">
+                        <p>Não possui conta?<a href="#">Cria conta</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
