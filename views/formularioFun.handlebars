@@ -1,0 +1,45 @@
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                {{>mensagens}}
+                <form action="/cadastrarFuncionario" method="post" enctype="multipart/form-data" class="input-form">
+
+                    <h1>Cadastro de funcionário</h1>
+
+                    <div class="mb-2">
+                        <label for="nome" class="form-label">Funcionário</label>
+                        <input type="text" value="" name="funcionario" class="form-control input-box" placeholder="Serviço">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="nome" class="form-label">Email</label>
+                        <input type="email" value="" name="email" class="form-control input-box" placeholder="Email...">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="nome" class="form-label">Celular</label>
+                        <input type="email" value="" name="celular" class="form-control input-box" placeholder="Número de celular...">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="nome" class="form-label">CPF</label>
+                        <input type="text" value="" name="cpf" class="form-control input-box" placeholder="CPF...">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="nome" class="form-label">Data de contratação</label>
+                        <input type="date" value="" name="data-contrato" class="form-control input-box" placeholder="Data de contratação...">
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="nome" class="form-label">CTPS</label>
+                        <input type="text" value="" name="ctps" class="form-control input-box" placeholder="CTPS...">
+                    </div>
+                    
+                    <input type="submit" class="btn btn-primary" value="Cadastrar">
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
