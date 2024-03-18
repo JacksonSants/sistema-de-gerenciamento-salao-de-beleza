@@ -132,6 +132,38 @@ app.post('/cadastrar', function(req, res){
     }
  });
 
+ app.post(`/cadastrarFuncionario`, function(req, res) {
+    try {
+        let nome = req.body.nome;
+        let email = req.body.email;
+        let celular = req.body.celular;
+        let cpf = req.body.cpf;
+        let dataContrato = req.body.dataContrato; // corrigido para pegar a data de contrato corretamente
+        let ctps = req.body.ctps;
+
+        // Verifica se algum campo está vazio ou se a data de contrato não é válida
+        if (nome == '' || email == '' || celular == '' || cpf == '' || dataContrato == '' || ctps == '') {
+            res.redirect('/falhaCadastro'); // Redireciona para a página de falha de cadastro
+        } else {
+            // Se todos os campos estiverem preenchidos e a data de contrato for válida, faz a inserção no banco de dados
+            let sql = `INSERT INTO funcionario (nome, email, celular, cpf, dataContrato, ctps) VALUES ('${nome}', '${email}', '${celular}', '${cpf}', '${dataContrato}', '${ctps}')`;
+
+            conexao.query(sql, (erro, retorno) => {
+                if (erro) {
+                    console.error('Erro ao executar a consulta SQL:', erro);
+                    res.redirect('/falhaCadastro'); // Redireciona para a página de falha de cadastro em caso de erro
+                    return;
+                }
+                console.log('Registro inserido com sucesso!');
+                res.redirect('/sucessoCadastro'); // Redireciona para a página de sucesso de cadastro
+            });
+        }
+    } catch (erro) {
+        console.error('Erro ao cadastrar funcionário:', erro);
+        res.redirect('/falhaCadastro');
+    }
+});
+
 
 
 //REMOÇÃO

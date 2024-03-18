@@ -1,0 +1,47 @@
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                {{>mensagens}}
+                <form action="/cadastrarFuncionario" method="post" enctype="multipart/form-data" class="input-form">
+
+                    <h1>
+                        Agendamento
+                    </h1>
+
+                    <div class="mb-2">
+                        <label for="nome" class="form-label">Data</label>
+                        <input type="date" value="" name="dataAgendamento" class="form-control input-box"
+                            placeholder="Serviço">
+                    </div>
+
+                    <select name="categoria" id="select-cat" class="form-control">
+                        <option id="select-cat" value="08:00">08:00</option>
+                        <option id="select-cat" value="10:00">09:00</option>
+                        <option id="select-cat" value="12:00">10:00</option>
+                        <option id="select-cat" value="14:00">11:00</option>
+                        <option id="select-cat" value="16:00">14:00</option>
+                        <option id="select-cat" value="18:00">15:00</option>
+                        <option id="select-cat" value="20:00">16:00</option>
+                        <option id="select-cat" value="20:00">17:00</option>
+                        <option id="select-cat" value="20:00">18:00</option>
+                        <option id="select-cat" value="20:00">19:00</option>
+                        <option id="select-cat" value="20:00">20:00</option>
+
+                    </select>
+
+                    <div class="mb-2">
+                        <label for="servico" class="form-label">Serviço</label>
+                        <select name="categoria" id="select-cat" class="form-control">
+                            <option selected>Selecione seu funcionario</option>
+                            <option value="1">One</option>
+
+                        </select>
+                    </div>
+
+                    <input type="submit" class="btn btn-primary" value="Cadastrar">
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
