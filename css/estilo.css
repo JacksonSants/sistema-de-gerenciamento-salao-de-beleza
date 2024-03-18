@@ -72,6 +72,10 @@ h1 {
     border-radius: 20px;
 }
 
+.btn {
+    color: #fff;
+}
+
 
 .card {
     margin-top: 40px;
